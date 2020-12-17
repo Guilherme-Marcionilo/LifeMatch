@@ -1,0 +1,32 @@
+.home{
+    color:white !important;
+}
+.home:hover{ 
+    color:#fc5f81 !important;
+
+}
+
+
+.feed{
+    color:white !important;
+}
+.feed:hover{ 
+    color:#bc43f5 !important;
+
+}
+
+.login{
+    color:white !important;
+}
+.login:hover{ 
+    color:#4ec9f1 !important;
+
+}
+
+.cadastro{
+    color:white !important;
+}
+.cadastro:hover{ 
+    color:#f7e84b !important;
+
+}

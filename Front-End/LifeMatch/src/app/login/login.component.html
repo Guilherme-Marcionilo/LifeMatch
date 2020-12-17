@@ -1,0 +1,116 @@
+<div class="background pt-5 pb-3">
+	<div>
+	  <div class="teste" id="form"> 
+		<div class="avatar ">
+		  <div class="cabeca ">
+			<div class="orelha-esq orelha"></div>
+			<div class="orelha-dir orelha"></div>
+
+			<div class="olho-esq olhos">
+			  <div class="palpebra"></div>
+			</div>
+  
+			<div class="olho-dir olhos">
+			  <div class="palpebra"></div>
+			</div>
+  
+			<div class="dente-esq dentes"></div>
+			<div class="dente-dir dentes"></div>
+		  </div>
+  
+		  <div class="bracos" id="bracos">
+			<div class="mao-esq mao">
+			  <div class="unha"></div>
+			</div>
+  
+			<div class="mao-dir mao">
+			  <div class="unha"></div>
+			</div>
+		  </div>
+		</div>
+		<div class="shadow bg-Light">
+		  <div class="row mb-5 d-flex justify-content-center ">
+			<div class="col-md-8 mt-4">
+			  <div>
+				<div class="form-group">
+				  <label for="exampleInputEmail1">Endereço de email</label>
+				  <input
+					type="email"
+					class="form-control"
+					id="exampleInputEmail1"
+					aria-describedby="emailHelp"
+					placeholder="Seu email"
+					[(ngModel)]="usuarioLogin.usuario"
+					style="background: #dff6f8;"
+				  />
+				  <small id="emailHelp" class="form-text text-muted" style="font-size: 10.7px;"
+					>Nunca iremos compartilhar seu email, com ninguém.</small
+				  >
+				</div>
+  
+				<div class="form-group">
+				  <label for="exampleInputPassword1">Senha</label>
+				  <input
+					type="password"
+					class="form-control"
+					id="exampleInputPassword1"
+					placeholder="Senha"
+					[(ngModel)]="usuarioLogin.senha"
+					style="background: #dff6f8;"
+				  />
+				</div>
+  
+				<div class="d-flex justify-content-center mb-5">
+				  <button
+					type="submit"
+					class="btn mb-5  w-100 entra"
+					(click)="entrar()"
+					style="border: 2px solid #81dde4;background:#81dde4; color:rgb(0, 0, 0);"
+				  >
+					Entrar
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+<script>
+	// Aviso: Não sou tão bom com JQuery, caso exista uma forma melhor de fazer essas funções, por favor, dê um fork e contribua com o parceiro aqui =D!!!
+
+		// Função para adicionar a class ".esconder", responsável pela animação do avatar
+		$(function(){
+			$("#senha").focus(function(){
+				$("#bracos").addClass("esconder");
+				$(".olhos").addClass("fechar");
+			});
+
+			$("#senha").focusout(function(){
+				$("#bracos").removeClass("esconder");
+				$(".olhos").removeClass("fechar");
+			});
+		});
+
+		// Função para adicionar a class ".validacao", responsável validação visual que é feita pelo CSS
+		$(function(){$("input").focusout(function(){$("#form").addClass("validacao"); }); });
+</script>

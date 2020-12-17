@@ -1,0 +1,115 @@
+.b {
+    width:34px;
+    height: 100%;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #bc61e7;
+    border: 0;
+ 
+ }
+ 
+ .b:hover {
+     background-color:#eed76f; 
+     
+  }
+/* jumbotron com opacidade */
+#jumbo {
+    /* IE8 and below */
+    background: rgb(121, 116, 194);
+    /* all other browsers */
+    background: rgba(54, 88, 200, 0.5);
+}
+#white {
+    background: rgb(255, 255, 255);
+}
+
+/* Depoimentos */
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+ }
+ /* .card{
+    background-color:  rgba(255, 255, 255, 0.6);
+    min-width: 350px;
+    margin: 10px;
+    height: 270px;
+    text-align: center;
+ } */
+
+ .txtt {
+     margin-bottom: 10% !important;
+ }
+ .backgroundhome{
+    background: rgb(209, 186, 245);
+ }
+ .azulclaro{
+    background: #BEE4E7;
+ }
+ .azul{
+    background: #9DDBF0;
+ }
+ .amarelo{
+    background: #FBF6BC;
+ }
+ .rosa{
+   background: #F8C9D3;
+}
+ .txtt {
+   color: #fff;
+   font-size: 120px;
+   
+   text-align: center;
+   text-shadow: 0 0 10px #ae00ff;
+}
+
+.bordaazul {
+
+   border: 3px solid #9DDBF0;
+ 
+}
+
+.bordarosa {
+
+   border: 3px solid #F8C9D3;
+ 
+}
+
+.bordalilas {
+
+   border: 3px solid rgb(209, 186, 245);
+ 
+}
+
+.bordaamarela {
+
+   border: 3px solid #FBF6BC;
+ 
+}
+
+.bordaazulclaro {
+
+   border: 3px solid #BEE4E7;
+ 
+}
+
+.logoback {
+   background-image: url('https://i.imgur.com/LHSaE9H.png');
+
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+
+  .imgback {
+   background-image: url('https://i.imgur.com/xn3e6GG.png');
+
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+

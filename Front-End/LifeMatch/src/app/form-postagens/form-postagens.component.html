@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row mb-5 mt-5">
+      <div class="col">
+
+        <div class="row">
+            <div class="col-md 12 mb-3 pt-5">
+                <h1>Que tal divulgar uma atividade legal da ONG ?</h1>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputTitulo4">Titulo</label>
+                <input type="text" class="form-control" id="inputTitulo4" placeholder="Digite aqui o titulo da postagem" [(ngModel)]='postagem.titulo' name="titulo">
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlDescricao">Descrição</label>
+                <textarea class="form-control" id="exampleFormControlDescricao" rows="3" [(ngModel)]='postagem.descricao' name="descricao">Digite uma descrição para a postagem</textarea>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="inputImagemPostagem">Imagem da postagem</label>
+                  <input type="text" class="form-control" id="inputImagemPostagem" placeholder="Digite aqui o titulo da postagem">
+                </div>
+              </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputEstado">Tema</label>
+                <select class="form-control" [(ngModel)]='id' (change)='findByIdTema()' name="id">
+                  <option *ngFor='let item of listaTemas' value={{item.idTema}}>
+                    {{item.categoriaAjuda}}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputEstado">Identificação</label>
+                <select id="inputEstado" class="form-control">
+                  <option selected>ONG</option>
+                  <option>Pessoa Fisíca</option>
+                </select>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" (click)='publicar()' routerLink="/painel">Publicar</button>
+          </form>
+
+      </div>
+      <div class="col mt-5 d-flex justify-content-center">
+        <img style="height:500px;" src="https://images.squarespace-cdn.com/content/v1/51100a7ce4b0837c15802d9e/1604571560602-NE9EJFRLOOPV10UE33WL/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyLLXgctAyUJRqJUUGWVDK_ZzIgvsybGcZEPqUYiXY8im/zarapicken_support.jpg?format=750w" alt="">
+      </div>
+    </div>
+
+
+    

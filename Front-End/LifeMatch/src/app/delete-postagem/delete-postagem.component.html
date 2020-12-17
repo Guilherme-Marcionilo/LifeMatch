@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row mb-5 mt-5">
+        <div class="col">
+
+            <div class="row">
+                <div class="col-md 12 mb-3 pt-5">
+                    <h1>Que tal divulgar uma atividade legal da ONG ?</h1>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputTitulo4">Titulo</label>
+                        <input type="text" class="form-control" id="inputTitulo4"
+                            placeholder="Digite aqui o titulo da postagem" [(ngModel)]='postagem.titulo' name="titulo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlDescricao">Descrição</label>
+                    <textarea class="form-control" id="exampleFormControlDescricao" rows="3"
+                        [(ngModel)]='postagem.descricao'
+                        name="descricao">Digite uma descrição para a postagem</textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputImagemPostagem">Imagem da postagem</label>
+                        <input type="text" class="form-control" id="inputImagemPostagem"
+                            placeholder="Digite aqui o titulo da postagem">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 d-flex">
+                      <button type="button" class="btn btn-outline-warning mr-1" (click)='btnSim()'>Apagar</button>
+                      <button type="button" class="btn btn-outline-danger" (click)='btnNao()'>Cancelar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img src="https://image.freepik.com/vetores-gratis/maos-pessoas-ajuda-icone_24877-1241.jpg" alt="">
+        </div>
+    </div>
+</div>
