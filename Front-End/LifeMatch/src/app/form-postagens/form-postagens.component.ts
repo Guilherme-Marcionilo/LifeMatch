@@ -18,10 +18,12 @@ export class FormPostagensComponent implements OnInit {
   listaTemas: Tema[]
   id: number
 
+
+
   constructor(
     private temaService: TemaService,
     private postagemService: PostagemService,
-    private alert: AlertasService
+    private alert: AlertasService,
   ) { }
 
   ngOnInit() {
@@ -57,5 +59,8 @@ export class FormPostagensComponent implements OnInit {
         })
       }
      }
+
+
+
 
 }

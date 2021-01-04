@@ -16,6 +16,8 @@ import { UsuarioLogin } from './../model/UsuarioLogin';
 })
 export class PainelComponent implements OnInit {
 
+  nome = environment.nome
+
   key = 'data'
   reverse = true
 
