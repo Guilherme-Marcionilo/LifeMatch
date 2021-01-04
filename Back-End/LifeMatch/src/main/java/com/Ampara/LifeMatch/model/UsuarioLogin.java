@@ -2,7 +2,6 @@ package com.Ampara.LifeMatch.model;
 
 public class UsuarioLogin {
 
-	
 	//ATRIBUTOS
 	private String nome;
 	

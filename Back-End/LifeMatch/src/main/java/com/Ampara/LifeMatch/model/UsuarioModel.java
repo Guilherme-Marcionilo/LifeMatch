@@ -12,8 +12,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.UniqueElements;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
@@ -54,7 +52,7 @@ public class UsuarioModel {
 	
 	
 	//RELACIONAMENTO ENTRE A TABELA POSTAGEM
-	@OneToMany (mappedBy = "usuario", cascade = CascadeType.ALL)
+	@OneToMany (mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private  List<PostagemModel> postagem;
 

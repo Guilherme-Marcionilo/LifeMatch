@@ -34,7 +34,7 @@ public class TemaModel {
 	private String descricao;
 
 	//RELACIONAMENTO ENTRA A TABELA POSTAGEM
-	@OneToMany (mappedBy = "tema", cascade = CascadeType.ALL)
+	@OneToMany (mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
 	private  List<PostagemModel> postagem;
 

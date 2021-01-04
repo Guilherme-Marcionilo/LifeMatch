@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
 
+      environment.nome =this.usuarioLogin.nome //pegando o nome do usuario que está logado para mostra na tela
+
       environment.token = this.usuarioLogin.token
       this.router.navigate(['/painel'])
     })
