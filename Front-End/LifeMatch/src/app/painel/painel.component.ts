@@ -17,6 +17,7 @@ import { UsuarioLogin } from './../model/UsuarioLogin';
 export class PainelComponent implements OnInit {
 
   nome = environment.nome
+  imagem = environment.imagem
 
   key = 'data'
   reverse = true
@@ -62,8 +63,10 @@ export class PainelComponent implements OnInit {
 
   //criando um método para encontrar todas as Postagens e retornando em lista
   findAllPostagens(){
+    
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
       this.listaPostagens = resp
+      console.log(this.listaPostagens)
     })
   }
 

@@ -12,11 +12,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
 @Entity
 @Table (name = "tb_usuario")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioModel {
 	
 	//ATRIBUTOS 
@@ -44,12 +47,16 @@ public class UsuarioModel {
 
 	@Column
 	@NotNull
-	private String imagensUsuario;
+	private String imagem;
 	
 	@Column
 	@NotNull
 	private String usuario;
 	
+//	FAZENDO O TESTE DE ADM OU NORMAL
+	@Column
+	@NotNull
+	private String tipo;
 	
 	//RELACIONAMENTO ENTRE A TABELA POSTAGEM
 	@OneToMany (mappedBy = "usuario", cascade = CascadeType.REMOVE)
@@ -98,14 +105,6 @@ public class UsuarioModel {
 		this.email = email;
 	}
 
-	public String getImagensUsuario() {
-		return imagensUsuario;
-	}
-
-	public void setImagensUsuario(String imagensUsuario) {
-		this.imagensUsuario = imagensUsuario;
-	}
-
 	public String getUsuario() {
 		return usuario;
 	}
@@ -123,7 +122,23 @@ public class UsuarioModel {
 		this.postagem = postagem;
 	}
 
-	
+	public String getImagem() {
+		return imagem;
+	}
 
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	
+	
 	
 }

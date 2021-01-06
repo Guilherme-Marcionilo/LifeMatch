@@ -95,7 +95,7 @@
         
 
         
-        <div class="row mb-3" >
+       <div class="row mb-3" >
 
           <div class="col-md-4" *ngFor="let item of listaPostagens" >
             <div class="card w-100"  style="width: 18rem;">
@@ -117,7 +117,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+           <div class="col-md-4">
             <div class="card w-100" style="width: 18rem;">
               <img class="card-img-top" width="200px" height="200px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Imagem de capa do card">
               <div class="card-body">
@@ -128,6 +128,57 @@
             </div>
           </div>
         </div> 
+
+
+        <div class="row">
+          <div class="col-md-12" *ngFor="let item of listaPostagens | orderBy : key : reverse">
+            <!-- <img src="{{item.usuario.imagem}}" alt=""> -->
+            <div class="container w-100">
+            <div class="card mt-4 shadow">
+              <div class="card-header" style="background: #9ddbf0; border:1px solid #BEE4E7;">
+                <strong>Tema: </strong>{{item.tema.categoriaAjuda}}
+              </div>
+              <div class="card-body" style="border:1px solid #9ddbf0;">
+                
+                <div class="row">
+  
+                  <div class="col-md-7">
+                    <h3 class="card-title">{{item.titulo}}</h3>
+                    <p class="card-text">{{item.descricao}}</p>
+                  </div>
+                  <div class="col-md-5 d-flex justify-content-end align-self-center">
+                    <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
+                  </div>
+  
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-12 d-flex">
+                    <button type="button" class="btn btn-outline-warning mr-1" [routerLink]="['/editar-postagem', item.idPostagem]">Editar</button>
+                    <button type="button" class="btn btn-outline-danger" [routerLink]="['/deletar-postagem', item.idPostagem]">Apagar</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--/Fim das pesquisas por Postagem-->
+  
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
       </div>
     </div>

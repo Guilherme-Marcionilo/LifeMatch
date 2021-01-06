@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Postagem } from './../model/Postagem';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -32,9 +33,18 @@ export class FormTemaComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+    
+    if(environment.tipo != 'adm'){
+      this.alert.showAlertInfo('Você precisa ser adm para acessar essa rota')
+      this.router.navigate(['/home'])
+    }
+
 
     this.findAllTemas()
   }
+
+ 
+ 
 
   findAllTemas(){
     this.temaService.getAllTemas().subscribe((resp: Tema[])=>{

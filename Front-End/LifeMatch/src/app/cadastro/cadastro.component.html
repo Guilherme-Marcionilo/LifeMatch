@@ -57,6 +57,17 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="tipo">Tipo de Usuário</label>
+                  <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                    <option>Selecione um tipo de usuário:</option>
+                    <option value="normal">Normal</option>
+                    <option value="adm">Administrador</option>
+                  </select>
+                </div>
+
+
+
+               <div class="form-group">
                     <label for="nome">Senha</label>
                     <input style="background: #dff6f8;" type="password" class="form-control" id="senha"
                     placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}' >
@@ -71,6 +82,13 @@
 
                 <div class="d-flex justify-content-center">
                     <button style="border: 2px solid #81dde4;background:#81dde4; color:rgb(0, 0, 0);" class="btn btn-outline-success p-2" (click)='cadastrar()' >Cadastrar</button>
+                </div>
+
+                <div class="form-group">
+                  <img style="width:150px; height:150px;" id="imagem-preview"
+                   src="https://image.flaticon.com/icons/png/512/17/17004.png" alt="">
+                  <input type="file" (change)='carregarImagemPreview($event)'>
+                  <button (click)='cadastrar()'>Cadastrar Imagem</button>
                 </div>
 				
 			  </div>

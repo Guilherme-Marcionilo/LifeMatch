@@ -4,6 +4,8 @@
   <div class="jumbotron jumbotron-fluid mt-5" style="background: #b67ae7">
     <div class="container">
       <h1 class="display-6">Bem vinde, {{nome}}!</h1>
+      <img style="width: 150px; height:150px;" src="{{imagem}}" alt="">
+    
       <p class="lead">Aqui você pode encontrar a ONG que mais combina com você e ver as postagens dela!</p>
     </div>
   </div>
@@ -268,10 +270,10 @@
       </div>
 
 
-      <!--Inicio das pesquisas por Postagem-->
+      <!-- Inicio das pesquisas por Postagem-->
       <div class="row">
         <div class="col-md-12" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-          
+          <!-- <img src="{{item.usuario.imagem}}" alt=""> -->
           <div class="container w-100">
           <div class="card mt-4 shadow">
             <div class="card-header" style="background: #9ddbf0; border:1px solid #BEE4E7;">
@@ -286,7 +288,7 @@
                   <p class="card-text">{{item.descricao}}</p>
                 </div>
                 <div class="col-md-5 d-flex justify-content-end align-self-center">
-                  <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
+                  <img width="300px" height="300px" src="{{item.imagensPostagem}}" alt="Generic placeholder image">
                 </div>
 
               </div>
@@ -335,7 +337,7 @@
                     <p class="card-text">{{post.descricao}}</p>
                   </div>
                   <div class="col-md-5 d-flex justify-content-end align-self-center">
-                    <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
+                    <img width="300px" height="300px" src="{{post.imagensPostagem}}" alt="Imagem não encontrada">
                   </div>
                   <div class="row">
                     <div class="col-md-12 d-flex ml-2">

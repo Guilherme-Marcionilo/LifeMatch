@@ -22,9 +22,18 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="inputImagemPostagem">Imagem da postagem</label>
-                  <input type="file" class="form-control" id="inputImagemPostagem" placeholder="Cole aqui o link da imagem para a postagem">
+                  <input (change)='carregarImg($event)' type="file" class="form-control" id="inputImagemPostagem" placeholder="Cole aqui o link da imagem para a postagem">
                 </div>
               </div>
+
+              <!-- <div class="form-group">
+                <img style="width:150px; height:150px;" id="imagem-preview"
+                 src="https://image.flaticon.com/icons/png/512/17/17004.png" alt="">
+                <input type="file" (change)='carregarImagemPreview($event)'>
+                <button (click)='cadastrar()'>Cadastrar Imagem</button>
+              </div> -->
+
+
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputEstado">Tema</label>
