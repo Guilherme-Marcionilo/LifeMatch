@@ -1,4 +1,3 @@
-// Aviso: Não sou tão bom com JQuery, caso exista uma forma melhor de fazer essas funções, por favor, dê um fork e contribua com o parceiro aqui =D!!!
 
 		// Função para adicionar a class ".esconder", responsável pela animação do avatar
 		$(function(){

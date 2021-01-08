@@ -12,11 +12,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
 @Entity
 @Table (name = "tb_tema")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaModel {
 	
 	//ATRIBUTOS

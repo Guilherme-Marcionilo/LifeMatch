@@ -1,3 +1,4 @@
+import { MidiaServiceService } from './../midia-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from '../model/Postagem';
@@ -16,6 +17,8 @@ export class PutPostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
   idPostagem: number
 
+  imagem: File
+
   tema: Tema = new Tema()
   listaTemas: Tema[]
   id: number
@@ -25,7 +28,8 @@ export class PutPostagemComponent implements OnInit {
     private postagemService: PostagemService,
     private router: Router,
     private route: ActivatedRoute,
-    private alert: AlertasService
+    private alert: AlertasService,
+    private midiaService: MidiaServiceService
   ) { }
 
   ngOnInit() {
@@ -55,19 +59,38 @@ export class PutPostagemComponent implements OnInit {
     })
   }
 
-  salvar(){
-    this.tema.idTema = this.id
-    this.postagem.tema = this.tema
+  carregarImg(event: any) {
+    this.imagem = event.target.files[0]     
+  }
 
-    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem)=>{
-      this.postagem = resp
-      this.router.navigate(['/painel'])
-      this.alert.showAlertSuccess('Postagem alterada com sucesso')
-    }, err => {
-      if(err.status == '500'){
-        this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
-      }
+
+
+
+  salvar(){
+
+    if (this.imagem) {
+      console.log(this.imagem)
+      this.midiaService.uploadPhoto(this.imagem).subscribe((resp: any) => {
+      
+      this.postagem.imagensPostagem = resp.secure_url
+      
+      this.tema.idTema = this.id
+      this.postagem.tema = this.tema
+  
+      this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem)=>{
+        this.postagem = resp
+        this.router.navigate(['/painel'])
+        this.alert.showAlertSuccess('Postagem alterada com sucesso')
+      }, err => {
+        if(err.status == '500'){
+          this.alert.showAlertDanger('Preencha todos os campos corretamente antes de enviar!')
+        }
+      })
+    
+
     })
+  }
+
   }
 
 }

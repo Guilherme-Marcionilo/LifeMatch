@@ -3,9 +3,9 @@
     <div class="col">
 
       <div class="container">
+
         <div class="row mb-5 mt-5">
           <div class="col">
-
             <div class="row">
               <div class="col-md 12 mb-3 mt-5">
                 <h1>Cadastre um novo tema!</h1>
@@ -19,6 +19,7 @@
                   <input type="text" class="form-control" id="inputTema4" placeholder="Digite aqui o tema" [(ngModel)]="tema.categoriaAjuda" name="categoriaAjuda">
                 </div>
               </div>
+
               <div class="form-group">
                 <label for="exampleFormControlDescricao">Descrição</label>
                 <textarea class="form-control" id="exampleFormControlDescricao" placeholder="Digite a descrição da categoria aqui"
@@ -28,20 +29,19 @@
             </form>
           </div>
         </div>
+
         <div class="row">
           <table class="table table-striped mb-5">
             <thead>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Tema</th>
-                <th scope="col">Descrição</th>
               </tr>
             </thead>
             <tbody >
               <tr *ngFor="let item of listaTemas">
                 <th scope="row">{{item.idTema}}</th>
                 <td>{{item.categoriaAjuda}}</td>
-                <td>{{item.descricao}}</td>
                 <td class="d-flex justify-content-end">
                   <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-tema', item.idTema]">Editar</a>
                   <a class="btn btn-outline-danger" [routerLink]="['/deletar-tema', item.idTema]">Apagar</a>
@@ -57,77 +57,42 @@
             <h1>Aqui você pode editar ou excluir uma postagem!</h1>
           </div>
         </div>
+          
 
-        <!-- <div class="row">
-          <div class="col-md-12" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-            
-            <div class="container w-100">
-            <div class="card mt-4">
-              <div class="card-header">
-                <strong>Tema: </strong>{{item.tema.categoriaAjuda}}
-              </div>
-              <div class="card-body">
-                
-                <div class="row">
-  
-                  <div class="col-md-7">
-                    <h3 class="card-title">{{item.titulo}}</h3>
-                    <p class="card-text">{{item.descricao}}</p>
-                  </div>
-                  <div class="col-md-5 d-flex justify-content-end align-self-center">
-                    <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
-                  </div>
-  
-                </div>
-  
-                <div class="row">
-                  <div class="col-md-12 d-flex">
-                    <button type="button" class="btn btn-outline-warning mr-1" [routerLink]="['/editar-postagem', item.idPostagem]">Editar</button>
-                    <button type="button" class="btn btn-outline-danger" [routerLink]="['/deletar-postagem', item.idPostagem]">Apagar</button>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            </div>
-          </div>
-        </div> -->
-        
-
-        
         <div class="row mb-3" >
 
           <div class="col-md-4" *ngFor="let item of listaPostagens" >
-            <div class="card w-100"  style="width: 18rem;">
-              <img class="card-img-top" width="200px" height="200px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Imagem de capa do card">
-              <div class="card-body" >
-                <h5 class="card-title">Título: {{item.titulo}}</h5>
+            <div class="card w-100 shadow" style="border:1px solid #9ddbf0; width: 18rem;" >
+              <img class="card-img-top" width="200px" height="200px" src="{{item.imagensPostagem}}" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">{{item.titulo}}</h5>
                 <p class="card-text">{{item.descricao}}</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" width="200px" height="200px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Título do card</h5>
-                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
+
+              <div class="row mb-3">
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button type="button" class="btn btn-outline-warning mr-1" [routerLink]="['/editar-postagem', item.idPostagem]">Editar</button>
+                  <button type="button" class="btn btn-outline-danger" [routerLink]="['/deletar-postagem', item.idPostagem]">Apagar</button>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card w-100" style="width: 18rem;">
-              <img class="card-img-top" width="200px" height="200px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Título do card</h5>
-                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-                
-              </div>
+
             </div>
           </div>
         </div> 
 
+
+
+
+
+  
       </div>
     </div>
+
+
+
+      </div>
+    </div>
+
+
+
+    

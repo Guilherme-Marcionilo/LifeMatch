@@ -14,12 +14,14 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
 @Entity
 @Table (name = "tb_postagem")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemModel {
 	
 	//ATRIBUTOS

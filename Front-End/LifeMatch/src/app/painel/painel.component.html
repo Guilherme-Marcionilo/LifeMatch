@@ -3,8 +3,18 @@
   <!--Titulo-->
   <div class="jumbotron jumbotron-fluid mt-5" style="background: #b67ae7">
     <div class="container">
-      <h1 class="display-6">Bem vinde, {{nome}}!</h1>
-      <p class="lead">Aqui você pode encontrar a ONG que mais combina com você e ver as postagens dela!</p>
+
+      <div class="row align-items-center">
+        <div class="col-md-10">
+          <h1 class="display-6">Bem vinde, {{nome}}!</h1>    
+          <p class="lead">Aqui você pode encontrar a ONG que mais combina com você e ver as postagens dela!</p>
+        </div>
+        <div class="col-md-2">
+          <img class="rounded float-end" style="width: 150px; height:150px;" src="{{imagem}}" alt="imagem-usuario-perfil">
+        </div>
+      </div>
+
+      
     </div>
   </div>
 
@@ -42,13 +52,13 @@
             <div class="col-md-3" style="float:left">
               <div class="card mb-2 azulclaro">
                 <img class="card-img-top" src="../../assets/img/FlorGentil1.jpg" alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Lar - Melhor Idade</h4>
                   <p class="card-text">Somos uma Instituição fundada em 21/06/1935, o que era até então uma vila de
                     moradores, assumindo o trabalho dos Vicentinos, iniciou-se as atividades como Lar de Acolhida de
                     Idosos</p>
                   <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#primeiroModal">Doar</button>
                   </div>
                 </div>
@@ -60,13 +70,13 @@
             <div class="col-md-3" style="float:left">
               <div class="card mb-2 azul">
                 <img class="card-img-top" src="../../assets/img/crianca.jpg" alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Mães Solo</h4>
                   <p class="card-text">As mães solo vivenciam uma sobrecarga mental e física imensa, tentam sozinhas
                     conciliar os cuidados com a casa, a limpeza, necessidades básicas, obrigações do trabalho e
                     educação.</p>
                     <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#segundoModal">Doar</button>
                   </div>
                 </div>
@@ -79,12 +89,12 @@
               <div class="card mb-2 rosa">
                 <img class="card-img-top" src="../../assets/img/criancas2.jpg" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Amigos do Bem</h4>
                   <p class="card-text">Conscientes de que a educação é a base para o desenvolvimento humano, trabalhamos
                     para oferecer programas educacionais a crianças e jovens das comunidades atendidas.</p>
                     <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                    <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#terceiroModal">Doar</button>
                     </div>
                 </div>
@@ -97,13 +107,13 @@
               <div class="card mb-2 roxo">
                 <img class="card-img-top" src="../../assets/img/criancasafrica.jpg" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Sem Fronteira</h4>
                   <p class="card-text"> ONG teve início em São Paulo (SP), em meados de 2000. A organização espalhou-se
                     para outros estados. Em 8 anos, a ONG soma 500 voluntários, dentro e fora do Brasil transformando o
                     futuro.</p>
                     <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#quartoModal">Doar</button>
                   </div>
                 </div>
@@ -122,14 +132,14 @@
               <div class="card mb-2 azulclaro">
                 <img class="card-img-top" src="../../assets/img/carreira.png" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Semear</h4>
                   <p class="card-text">Como se o caminho percorrido até o momento de ingressar na faculdade não fosse
                     árduo o suficiente para um jovem de baixa renda, procuramos auxiliar o jovem que sonha com seu
                     sucesso.</p>
                     
                     <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#quintoModal">Doar</button>
                     </div>
 
@@ -143,13 +153,13 @@
               <div class="card mb-2 azul">
                 <img class="card-img-top" src="../../assets/img/morador.jpg" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Anjos da Noite</h4>
                   <p class="card-text">Os Anjos da Noite é uma associação sem fins lucrativos que tem como real objetivo
                     a reinserção da pessoa em situação de rua. Distribuímos muito amor e escuta ativa todas as semanas.
                   </p>
                   <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#sextoModal">Doar</button>
                     </div>
 
@@ -163,13 +173,13 @@
               <div class="card mb-2 rosa">
                 <img class="card-img-top" src="../../assets/img/hospital.jpeg" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Hospitalhaços</h4>
                   <p class="card-text">Hospitalhaços é uma organização da sociedade civil sem fins lucrativos que
                     introduziu a arte do palhaço no universo da saúde, intervindo junto a crianças, adolescentes em
                     hospitais.</p>
                     <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#setimoModal">Doar</button>
                     </div>
                 </div>
@@ -182,13 +192,13 @@
               <div class="card mb-2 roxo">
                 <img class="card-img-top" src="../../assets/img/alimento2.jpg" height="169" width="253"
                   alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body text-center">
                   <h4 class="card-title">Alimentar</h4>
                   <p class="card-text">Sem fins lucrativos, de caráter organizacional, assistencial, filantrópico, com
                     finalidade de atender aos que a ela se dirigirem, independente de classe social ou crença religiosa.
                   </p>
                   <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                  <button type="button" class="btn btn-info" data-toggle="modal"
                     data-target="#oitavoModal">Doar</button>
                     </div>
                 </div>
@@ -268,10 +278,9 @@
       </div>
 
 
-      <!--Inicio das pesquisas por Postagem-->
+      <!-- Inicio das pesquisas por Postagem-->
       <div class="row">
         <div class="col-md-12" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-          
           <div class="container w-100">
           <div class="card mt-4 shadow">
             <div class="card-header" style="background: #9ddbf0; border:1px solid #BEE4E7;">
@@ -279,25 +288,15 @@
             </div>
             <div class="card-body" style="border:1px solid #9ddbf0;">
               
-              <div class="row">
-
+              <div class="row align-items-center">
                 <div class="col-md-7">
                   <h3 class="card-title">{{item.titulo}}</h3>
                   <p class="card-text">{{item.descricao}}</p>
                 </div>
                 <div class="col-md-5 d-flex justify-content-end align-self-center">
-                  <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
+                  <img width="400px" height="300px" src="{{item.imagensPostagem}}" alt="Generic placeholder image">
                 </div>
-
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 d-flex">
-                  <button type="button" class="btn btn-outline-warning mr-1" [routerLink]="['/editar-postagem', item.idPostagem]">Editar</button>
-                  <button type="button" class="btn btn-outline-danger" [routerLink]="['/deletar-postagem', item.idPostagem]">Apagar</button>
-                </div>
-              </div>
-              
+              </div>              
             </div>
           </div>
           </div>
@@ -325,28 +324,20 @@
         <div class="col-md-12" *ngFor="let item of listaTemas | orderBy : key : reverse">
           <div *ngFor='let post of item.postagem'>
             
-
             <div class="card mt-4">
-
-              <div class="card-body">
-                <div class="row">
+              <div class="card-body shadow" style="border:1px solid #9ddbf0;">
+                <div class="row align-items-center">
                   <div class="col-md-7 align-self-center">
                     <h3 class="card-title">{{post.titulo}}</h3>
                     <p class="card-text">{{post.descricao}}</p>
                   </div>
                   <div class="col-md-5 d-flex justify-content-end align-self-center">
-                    <img width="300px" height="300px" src="https://i.pinimg.com/originals/33/79/6a/33796ac32ac5f2acfb2984e48114d9e4.jpg" alt="Generic placeholder image">
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 d-flex ml-2">
-                      <button type="button" class="btn btn-outline-warning mr-1" [routerLink]="['/editar-postagem', item.idPostagem]">Editar</button>
-                      <button type="button" class="btn btn-outline-danger" [routerLink]="['/deletar-postagem', item.idPostagem]">Apagar</button>
-                    </div>
+                    <img width="300px" height="300px" src="{{post.imagensPostagem}}" alt="Imagem não encontrada">
                   </div>
                 </div>                
               </div>
-
             </div>
+
           </div>
         </div>
       </div>
@@ -371,21 +362,19 @@
         </div>
         <div class="modal-body">
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, assumenda laboriosam explicabo repellendus
-            inventore illum sint nulla earum asperiores! Cum a ullam at adipisci ipsam voluptatum tempora accusamus
-            blanditiis? Saepe!</p>
+          <p>Conscientes de que a educação é a base para o desenvolvimento humano, trabalhamos para oferecer programas
+            educacionais a crianças e jovens das comunidades atendidas.</p>
 
-          Livros
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
-
-          Cadernos
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
+            <strong>Cadernos</strong> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Mochilas</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
 
         </div>
         <div class="modal-footer">
@@ -415,18 +404,22 @@
           <p>As mães solo vivenciam uma sobrecarga mental e física imensa, tentam sozinhas conciliar os cuidados com a
             casa, a limpeza, necessidades básicas, obrigações do trabalho e educação.</p>
 
-          Ajuda Financeira
+          <strong>Fraldas</strong> 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
+          <strong>Roupinha de bebês</strong>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
+          <strong>Leite em pó</strong>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
 
-          Emprego
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
-          </div>
-
+      
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -454,17 +447,17 @@
           <p>Conscientes de que a educação é a base para o desenvolvimento humano, trabalhamos para oferecer programas
             educacionais a crianças e jovens das comunidades atendidas.</p>
 
-          Livros
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
+            <strong>Livros didáticos</strong> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Cadernos Novos</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
 
-          Cadernos
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
 
         </div>
         <div class="modal-footer">
@@ -493,17 +486,20 @@
           <p>ONG teve início em São Paulo (SP), em meados de 2000. A organização espalhou-se para outros estados. Em 8
             anos, a ONG soma 500 voluntários, dentro e fora do Brasil transformando o futuro. </p>
 
-          Alimentos
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
-
-          Itens de higiene
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
+            <strong>Alimentos Pereciveis</strong> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 65%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Itens de Higiene</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 30%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Cobertores</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
 
         </div>
         <div class="modal-footer">
@@ -534,17 +530,17 @@
 
           </p>
 
-          Empregados
+          <strong>Cursos de Qualificação profissional</strong> 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <br>
+          <strong>Parceria com acompanhamento psicológico</strong>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
 
-          Bolsas de estudo
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
 
         </div>
         <div class="modal-footer">
@@ -572,17 +568,20 @@
           <p>Os Anjos da Noite é uma associação sem fins lucrativos que tem como real objetivo a reinserção da pessoa em
             situação de rua. Distribuímos muito amor e escuta ativa todas as semanas.</p>
 
-          Alimentos
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-          </div>
-
-          Vestimentas
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
+            <strong>Alimentos Pereciveis</strong> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Roupas</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 35%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <strong>Colchões/Colchonete</strong>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
 
         </div>
         <div class="modal-footer">
@@ -612,16 +611,19 @@
             universo da saúde, intervindo junto a crianças, adolescentes em hospitais.
           </p>
 
-          Ajuda Financeira
+          <strong>Ajuda financeira</strong> 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-
-          Ajuda em Hospitais
+          <br>
+          <strong>Brinquedos</strong>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 45%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
+          <strong>Acompanhamento Médico profissional</strong>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
 
         </div>
@@ -651,17 +653,17 @@
             que a ela se dirigirem, independente de classe social ou crença religiosa.
           </p>
 
-          Alimentos
+          <strong>Alimentos</strong> 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <br>
+          <strong>Itens de Higiene pessoal</strong>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
 
-          Higiene
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-          </div>
 
         </div>
         <div class="modal-footer">

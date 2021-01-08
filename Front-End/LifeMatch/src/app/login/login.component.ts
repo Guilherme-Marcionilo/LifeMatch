@@ -27,8 +27,9 @@ export class LoginComponent implements OnInit {
       this.usuarioLogin = resp
 
       environment.nome =this.usuarioLogin.nome //pegando o nome do usuario que está logado para mostra na tela
-
+      environment.imagem = this.usuarioLogin.imagem
       environment.token = this.usuarioLogin.token
+      environment.tipo = this.usuarioLogin.tipo
       this.router.navigate(['/painel'])
     })
 

@@ -1,5 +1,22 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 
+
+input[type="file"] {
+    display: none;
+}
+
+/* Aparência que terá o seletor de arquivo */
+.label-foto {
+	background-color: #81dde4;
+	border-radius: 5px;
+	color: #000;
+	cursor: pointer;
+	font-size: 12pt;
+	padding: 6px 6px;
+  }
+
+
+
 /*	==================================================
 			Estilos globais (global styles)
 			================================================== */
@@ -433,3 +450,4 @@
 		.entra:hover {
 			background: #3dcad4 !important;
 		}
+

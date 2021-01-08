@@ -32,36 +32,38 @@
 		  <div class="row mb-5 d-flex justify-content-center ">
 			<div class="col-md-8 mt-4">
 			  <div>
+          <div class="form-group mt-2">
+            <img class="rounded mx-auto d-block" style="width:150px; height:150px;" id="imagem-preview" src="https://image.flaticon.com/icons/png/512/17/17004.png" alt="Pré visualização da imagem de perfil">
+            <div class="d-flex justify-content-center">
+            <label for='selecao-arquivo' class="label-foto">Selecione a foto de Perfil</label>
+            <input id='selecao-arquivo' type='file' (change)='carregarImagemPreview($event)'>
+          </div>
+          </div>
 				<div class="form-group">
 				  <label for="exampleInputEmail1">Nome</label>
-                  
-                 
-                  <input
-					type="text"
-					class="form-control"
-					id="nome"
-					placeholder="Digite o seu nome aqui"
-					[(ngModel)]='usuario.nome'
-					style="background: #dff6f8;"
-				  />
-				  <small class="form-text text-muted" style="font-size: 10.7px;"
-					>Nunca iremos compartilhar seu email, com ninguém.</small>
+          <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.nome' style="background: #dff6f8;" />
+				  <small class="form-text text-muted" style="font-size: 10.7px;">Seus dados estarão seguros conosco.</small>
 				</div>
-  
-		
-                
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input style="background: #dff6f8;" type="email" class="form-control" id="email" 
-                    placeholder="nome@example.com" [(ngModel)]='usuario.usuario' >
+                    placeholder="Email@exemplo.com" [(ngModel)]='usuario.usuario' >
                 </div>
 
                 <div class="form-group">
+                  <label for="tipo">Tipo de Usuário</label>
+                  <select class="form-control" style="background: #dff6f8;" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                    <option>Selecione um tipo de usuário:</option>
+                    <option value="normal">Normal</option>
+                    <option value="adm">Administrador</option>
+                  </select>
+                </div>
+
+               <div class="form-group">
                     <label for="nome">Senha</label>
                     <input style="background: #dff6f8;" type="password" class="form-control" id="senha"
                     placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}' >
                 </div>
-
 
                 <div class="form-group">
                     <label for="nome">Confirmar Senha</label>
@@ -69,9 +71,11 @@
                     placeholder="Digite a confirmação de senha" [(ngModel)]='usuario.senha' >
                 </div>
 
-                <div class="d-flex justify-content-center">
-                    <button style="border: 2px solid #81dde4;background:#81dde4; color:rgb(0, 0, 0);" class="btn btn-outline-success p-2" (click)='cadastrar()' >Cadastrar</button>
+                <div class="d-flex justify-content-center mb-4">
+                    <button style="border: 2px solid #81dde4;background:#81dde4; color:rgb(0, 0, 0);" class="btn p-2" (click)='cadastrar()' >Cadastrar</button>
                 </div>
+
+                
 				
 			  </div>
 			</div>

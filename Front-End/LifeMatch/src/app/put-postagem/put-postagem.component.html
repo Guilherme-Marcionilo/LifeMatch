@@ -22,13 +22,16 @@
                         [(ngModel)]='postagem.descricao'
                         name="descricao">Digite uma descrição para a postagem</textarea>
                 </div>
+                
+                
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="inputImagemPostagem">Imagem da postagem</label>
-                        <input type="text" class="form-control" id="inputImagemPostagem"
-                            placeholder="Digite aqui o titulo da postagem">
+                      <label for="inputImagemPostagem">Imagem da postagem</label>
+                      <input (change)='carregarImg($event)' type="file" class="form-control" id="inputImagemPostagem" placeholder="Cole aqui o link da imagem para a postagem">
                     </div>
                 </div>
+
+
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputEstado">Tema</label>
@@ -47,7 +50,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary" (click)='salvar()' routerLink="/painel">Publicar</button>
+                <button type="submit" class="btn btn-primary" (click)='salvar()' routerLink="/painel">Alterar</button>
             </form>
 
         </div>
