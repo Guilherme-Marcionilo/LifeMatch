@@ -1,3 +1,4 @@
+import { PostagemService } from './../service/postagem.service';
 import { environment } from './../../environments/environment.prod';
 import { Postagem } from './../model/Postagem';
 import { Component, OnInit } from '@angular/core';
@@ -26,6 +27,7 @@ export class FormTemaComponent implements OnInit {
 
 
   constructor(
+    private postagemService: PostagemService,
     private temaService: TemaService,
     private router: Router,
     private alert: AlertasService
@@ -41,10 +43,17 @@ export class FormTemaComponent implements OnInit {
 
 
     this.findAllTemas()
+    this.findAllPostagens()
   }
 
  
- 
+  findAllPostagens(){
+    
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
+      this.listaPostagens = resp
+      console.log(this.listaPostagens)
+    })
+  }
 
   findAllTemas(){
     this.temaService.getAllTemas().subscribe((resp: Tema[])=>{

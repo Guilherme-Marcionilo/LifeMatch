@@ -29,7 +29,7 @@ public class UsuarioModel {
 	
 	@Column
 	@NotNull
-	@Size (min = 10,max = 50)
+	@Size (min = 4,max = 50)
 	private String nome;
 	
 	@Column
