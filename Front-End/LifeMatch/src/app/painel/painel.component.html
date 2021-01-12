@@ -10,7 +10,7 @@
           <p class="lead">Aqui você pode encontrar a ONG que mais combina com você e ver as postagens dela!</p>
         </div>
         <div class="col-md-2">
-          <img class="rounded float-end" style="width: 150px; height:150px;" src="{{imagem}}" alt="imagem-usuario-perfil">
+          <img class="rounded-circle float-end" style="width: 200px; height:170px;" src="{{imagem}}" alt="imagem-usuario-perfil">
         </div>
       </div>
 
@@ -322,7 +322,7 @@
       <!--Inicio das pesquisas por Tema-->
       <div class="row mb-3">
         <div class="col-md-12" *ngFor="let item of listaTemas | orderBy : key : reverse">
-          <div *ngFor='let post of item.postagem'>
+          <div *ngFor='let post of item.postagem | orderBy : key : reverse'>
             
             <div class="card mt-4">
               <div class="card-body shadow" style="border:1px solid #9ddbf0;">
@@ -423,7 +423,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          <a href="https://wa.me/5511948629540"><button type="button" class="btn btn-primary">Contribuir</button></a>
+          <a href="https://wa.me/5511948629540" target="_blank"><button type="button" class="btn btn-primary">Contribuir</button></a>
         </div>
       </div>
     </div>
